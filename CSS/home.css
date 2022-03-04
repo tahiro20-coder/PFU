@@ -203,27 +203,37 @@ body{
     color: var(--clr-black);
 }
 
+main{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
 .shop-now{
-    width: 100%;
+    margin-top: 40px;
+    max-width: 100%;
+    height: 375px;
+    background-image: url(../images/Shop\ Now.png);
     
     
 }
 
-.shop-now-img{
+/* .shop-now-img{
     
     max-width: 100%;
     height: auto;
-}
+} */
 
 .shop-now-text-content{
-    
-    
+    padding: 30px 50px;
+    max-width: 100%;
+    height: auto;
+    margin-left: 90px;
 }
 .best-prices{
     font-family: jost;
     font-style: normal;
     font-weight: var(--fw-light);
-    font-size: 25px;
+    font-size: 15px;
 
     background-color: red;
     color: white;
@@ -245,7 +255,7 @@ body{
     font-family: jost;
     font-style: normal;
     font-weight: var(--fw-light);
-    font-size: 25px;
+    font-size: 20px;
 }
 
 .shop-now-btn{
@@ -254,7 +264,7 @@ body{
     background: #5800ff;
     color: white;
     border-radius: 30px;
-    padding: 8px 30px;
+    padding: 8px 50px;
     margin-top: 10px;
     text-decoration: none;
 
@@ -263,6 +273,81 @@ body{
     font-weight: 350;
     font-size: 16px;
     line-height: 22px;
-    /* identical to box height */
     
+}
+
+.main-sale{
+    max-width: 100%;
+    display: flex;
+    justify-content: space-evenly; 
+
+    margin-top: 40px;
+    font-family: jost;
+    font-style: normal;
+    
+}
+
+.sale-1{
+    background-image: url(../images/Sale-1.png);
+    width: 640px;
+    height: 375px;
+    color: var(--clr-white);
+}
+
+.sale-1-content{
+    margin: 80px 60px 80px 30px;
+    height: 371px;
+}
+
+.sale-text{
+    font-family: jost;
+    font-style: normal;
+    font-weight: var(--fw-light);
+    font-size: 17px;
+}
+
+.sale-title{
+    font-family: jost;
+    font-style: normal;
+    font-weight: var(--fw-semi-bold);
+    font-size: 45px;
+    line-height: 70px;
+}
+
+.sale-btn{
+    display: inline-block;
+    background: var(--clr-white);
+    color: var(--clr-black);
+    border-radius: 30px;
+    padding: 8px 50px;
+    margin-top: 10px;
+    text-decoration: none;
+
+    font-family: jost;
+    font-style: normal;
+    font-weight: var(--fw-regular);
+    font-size: 16px;
+    line-height: 22px;
+}
+
+.sale-2{
+    background-image: url(../images/Sale-2.png);
+    width: 640px;
+    height: 375px;
+    color: var(--clr-white);
+}
+
+.sale-2-content{
+    margin: 30px 50px;
+}
+
+.shop-info{
+    position: relative; 
+    width: 70%;
+    height: 144px;
+    left: 70px;
+    top: 40px; 
+    
+
+    background: #FFFFFF;
 }
