@@ -289,7 +289,10 @@ main{
 
 .sale-1{
     background-image: url(../images/Sale-1.png);
-    width: 640px;
+    background-position-x: 180px ;
+    background-repeat: no-repeat;
+    background-color: red;
+    width: 800px;
     height: 375px;
     color: var(--clr-white);
 }
@@ -332,7 +335,10 @@ main{
 
 .sale-2{
     background-image: url(../images/Sale-2.png);
-    width: 640px;
+    background-position-x: 180px ;
+    background-repeat: no-repeat;
+    background-color: var(--clr-violet);
+    width: 800px;
     height: 375px;
     color: var(--clr-white);
 }
