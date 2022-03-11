@@ -156,16 +156,21 @@ body{
 .AFC-nav-elements{
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    /* justify-content: space-between; */
 
     list-style: none;
+}
+
+.AFC-nav-elements > *{
+    flex-basis: 100%;
+    flex-direction: column;
+    width: 100px;
 }
 
 .AFC-nav-element{
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 25px; 
 }
 
 .menu{
@@ -347,13 +352,97 @@ main{
     margin: 30px 50px;
 }
 
-.shop-info{
-    position: relative; 
-    width: 70%;
-    height: 144px;
-    left: 70px;
-    top: 40px; 
+.shop-infos{
     
-
+    width: 90%;
+    height: 144px;
+    margin: 40px auto;
+    
     background: #FFFFFF;
+
+    font-family: 'Jost';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 32px;
+    color: #000000;
+
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.info{
+    display: flex;
+}
+
+.best-seller{
+    width: 90%;
+    height: 483px;
+    background: white;
+    margin: 40px auto;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.bs-title{
+    font-family: 'Jost';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 43px;
+    text-align: center;
+
+    color: #000000;
+
+}
+
+.bs-products{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    width: 90%;
+    height: 278px;
+}
+
+.bs-product{
+    width: 250px;
+    height: 278px;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    box-sizing: border-box;
+
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 27px;
+    text-align: center;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.bs-sale{
+    background: #FE0000;
+    text-transform: uppercase;
+    padding: 10px;
+    color: white;
+    margin-right: 185px;
+}
+
+.bs-products .bs-product:nth-last-of-type(5){
+    background-image: url(../images/fitboot.png);
+    background-repeat: no-repeat;
+    
+} 
+
+.bs-info{
+    margin-top: 100px;
 }
