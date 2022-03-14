@@ -380,7 +380,7 @@ main{
     width: 90%;
     height: 483px;
     background: white;
-    margin: 40px auto;
+    margin: 0px auto;
 
     display: flex;
     flex-direction: column;
@@ -440,9 +440,315 @@ main{
 .bs-products .bs-product:nth-last-of-type(5){
     background-image: url(../images/fitboot.png);
     background-repeat: no-repeat;
+    background-position-x: center;
+    background-position-y: 50px;
     
 } 
+
+.bs-products .bs-product:nth-last-of-type(4){
+    background-image: url(../images/Drone.png);
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-position-y: 50px;
+    
+} 
+
+.bs-products .bs-product:nth-last-of-type(3){
+    background-image: url(../images/Laptop.png);
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-position-y: 10px;
+    
+} 
+
+.bs-products .bs-product:nth-last-of-type(2){
+    background-image: url(../images/iphone.png);
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-position-y: 50px;
+    
+} 
+
+.bs-products .bs-product:nth-last-of-type(1){
+    background-image: url(../images/earduts.png);
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-position-y: 50px;
+    
+} 
+
 
 .bs-info{
     margin-top: 100px;
 }
+
+.bs-price{
+    color: #5800FF;
+}
+
+.bs-btn{
+    display: inline-block;
+    background: #5800FF;
+    border-radius: 60px;
+    padding: 0.5em 3.5em;
+    margin-bottom: 30px;
+
+    text-decoration: none;
+    font-family: 'Jost';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 43px;
+    text-align: center;
+
+    color: #FFFFFF;
+}
+
+.shop-by-cat{
+    width: 90%;
+    height: 910px;
+    margin: 40px auto;
+    background: var(--clr-white);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+    font-family: 'Jost';
+    font-style: normal;
+    font-weight: 500;
+    color: #000000;
+}
+
+.sbc-title{
+    font-size: 30px;
+    line-height: 43px;
+}
+
+.sbc-row{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 50px;
+    font-size: 22px;
+    line-height: 32px;
+}
+
+.sbc-row-elemnt{
+    width: 200px;
+    height: 200px;
+    border-radius: 6em;
+    background: rgba(196, 196, 196, 0.5);
+    margin: 0 5.5em;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.sbc-imgn{
+   width: 100px;
+   height: 100px;
+}
+
+.bp{
+    height: 543px;
+    width: 90%;
+    background: #FFFFFF;
+    margin: 0px auto;
+    background-image: url(../images/Tv\ 2.png);
+    background-repeat: no-repeat;
+    background-size: 70em  35em;
+}
+
+
+.bp-circle{
+
+    font-family: 'Jost';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 40px;
+    line-height: 58px;
+
+    align-items: center;
+    display: flex;
+    justify-content: center;
+
+
+    border-radius: 50%;
+    height: 150px;
+    width: 150px;
+    margin-left: 26em;
+    margin-top: 0.6em;
+
+    color: #FFFFFF;
+    background: #FE0000;
+
+    transform: rotate(30deg);
+}
+
+.bp-content{
+    width: 30%;
+    margin: 0 0 0 74.9em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.bp-title{
+    font-family: 'Jost';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 45px;
+    line-height: 65px;
+    text-align: center;
+
+    color: #000000;
+
+}
+
+.bp-terms{
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 25px;
+    line-height: 34px;
+    /* identical to box height */
+
+    text-align: center;
+
+    color: #000000;
+}
+
+.bp-btn{
+    display: inline-block;
+    background: #969696;
+    border-radius: 60px;
+    padding: 0.5em 3.5em;
+    margin-bottom: 30px;
+
+    text-decoration: none;
+    font-family: 'Jost';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 43px;
+    text-align: center;
+
+    color: #FFFFFF;
+}
+
+.brands{
+    width: 90%;
+    height: 336px;
+    margin: 40px auto;
+    background: var(--clr-white);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+}
+
+.brands-title{
+    font-family: 'Jost';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 43px;
+    text-align: center;
+
+    color: #000000;
+}
+
+.brand-div{
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+}
+
+.brand{
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    width: 252px;
+    height: 186px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sub{
+    width: 90%;
+    height: 285px;
+    margin: 0 auto;
+    background: var(--clr-violet);
+    color: var(--clr-white);
+}
+
+.sub-content{
+    width: 90%;
+    height: 90%;
+    margin: 0.5em auto;
+    padding: .5em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 41px;
+    /* identical to box height */
+
+    text-align: center;
+}
+
+.sub-title{
+    font-family: 'Jost';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 43px;
+    text-align: center;
+}
+
+.sub-input{
+    width: 100%;
+    height: 60px;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    
+}
+
+
+.email-input-main{
+    width: 90%;
+    height: 45px;
+    background: var(--clr-white);
+    border-radius: 30px;
+    display: flex;
+    
+}
+
+.email-input-sub{
+    position: absolute;
+    width: 70%;
+    height: 60px;
+    border-radius: 30px;
+    margin-right: 7em;
+}
+
+.sub-btn{
+    z-index: 1;
+    display: inline-block;
+    width: 60%;
+    margin-left: 40em;
+    background: #413E3E;
+    height: 60px;
+    border-radius: 30px;
+
+}
+
