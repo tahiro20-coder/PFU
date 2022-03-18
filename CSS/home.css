@@ -713,42 +713,136 @@ main{
     text-align: center;
 }
 
-.sub-input{
-    width: 100%;
+
+ .sub-input{
+    width: 80%;
     height: 60px;
-    border-radius: 30px;
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
+    
     
 }
 
 
+
 .email-input-main{
-    width: 90%;
-    height: 45px;
-    background: var(--clr-white);
-    border-radius: 30px;
+    width: 50%;
+    
+   margin-left: 1em;
+    
     display: flex;
+    flex-grow: 1;
+    flex-shrink: 1;
     
 }
 
 .email-input-sub{
-    position: absolute;
-    width: 70%;
-    height: 60px;
-    border-radius: 30px;
-    margin-right: 7em;
+    width: 100%;
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
 }
+
+.email-input-sub::placeholder{
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    
+    text-align: center;
+
+    color: #777676;
+}
+
 
 .sub-btn{
-    z-index: 1;
-    display: inline-block;
-    width: 60%;
-    margin-left: 40em;
-    background: #413E3E;
-    height: 60px;
-    border-radius: 30px;
 
+    display: inline-block;
+    border-top-right-radius: 30px ;
+    border-bottom-right-radius: 30px ;
+    background: #000000;
+    color: var(--clr-white);
+    text-decoration: none;
+    padding: .2em;
+    text-align: center;
+
+    
 }
+
+footer{
+
+    width: 100%;
+    background: var(--clr-white);
+    height: 573px;
+    margin-top: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer-content{
+    width: 90%;
+    height: 90%;
+    
+    display: flex;
+    justify-content: space-around;
+    align-content: center;
+    
+}
+
+.footer-sec{
+    
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+}
+
+.sec-title{
+    margin-top: 1em;
+
+    font-family: 'Jost';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 43px;
+    
+
+    
+}
+
+.sec-elements{
+    margin-top: 2em;
+
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 30px;
+    line-height: 50px;
+    list-style: none;
+    
+}
+
+.footer-links{
+    text-decoration: none;
+    color: #000000;
+}
+
+.sec-icones{
+    
+    list-style: none;
+    height: 10%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    
+}
+
+.icone-links{
+    
+    
+}
+
+.fa-brands{
+}
+
+
 
