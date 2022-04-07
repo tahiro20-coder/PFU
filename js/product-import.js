@@ -8,6 +8,7 @@ const init = function(e) {
     const prodcut_img = document.querySelector("picture");
     const prodcut_price = document.querySelector(".bs-price");
     
+    
     var details =JSON.parse(localStorage.getItem("details"));
     var img =JSON.parse(localStorage.getItem("img"));
     var price =JSON.parse(localStorage.getItem("price"));
@@ -19,9 +20,7 @@ const init = function(e) {
     prodcut_img.innerHTML = img[position];
     prodcut_price.innerHTML = price[position];
     
-    console.log("slm");
-    
-    
+
     
 };
 
