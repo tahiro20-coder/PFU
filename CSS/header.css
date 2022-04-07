@@ -1,0 +1,304 @@
+*,
+*::after,
+*::before{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* 
+ font-family: 'Jost', sans-serif;
+ font-family: 'Open Sans', sans-serif;
+*/
+
+body{
+    background: #EDEDED;
+}
+header{
+    width: 100%;
+}
+
+.nav-bar-main{
+   
+    width: 100%;
+    margin: 0 auto;
+    height: 2em;
+    color: var(--clr-white);
+    font-family: 'Jost', sans-serif;
+    font-weight: 500;
+    font-size: 1rem;
+    line-height: 23px;
+    background: var(--clr-black);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.container{
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 96%;
+    
+}
+.nav-bar-sec1{
+    display: flex;
+    align-items: center;
+    width: fit-content;
+    
+    
+}
+
+.box{
+    width: 24px;
+    height: 24px;
+    margin-right: 1em;
+    background-color: white;
+}
+
+.shipping-free{
+    min-width: 245px;
+    text-align: center;
+}
+
+.nav-bar-sec2{
+    min-width: fit-content;
+}
+
+
+.nav-elements{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+.nav-element{
+
+    padding: 0em .5em;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.nav-element + .nav-element{
+    margin-left: .2em;
+}
+
+.nav-element:hover{
+    background: var(--clr-white);
+    opacity: 0.9;
+    color: #000000;
+}
+
+.nav-bar-link{
+    width: 100%;
+    text-decoration: none;
+    color: var(--clr-white);
+    transition: all 0.3 ease;
+}
+.nav-bar-link:hover{
+    color: var(--clr-black);
+}
+
+.search-bar-main{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    width: 100%;
+    height: 5.5em;
+    background: #FFFFFF;
+    
+}
+
+.search-bar-sec1{
+    display: flex;
+    justify-content: space-between;
+    
+    width: 50%;
+
+}
+.logo{
+    width: 40%;
+    background-color: blueviolet;
+}
+
+.search-bar{
+    display: flex;
+    max-width: 400px;
+}
+
+.search-field{
+    position: relative;
+    width: 324px;
+    height: 55px;
+    background: #D9D9D9;
+    border-radius: 30px 0px 0px 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+    font-family: Jost;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 1.25rem;
+    line-height: 29px;
+    text-align: center;
+}
+
+.search-field input{
+    width: 80%;
+    margin-left: 2.4em;
+    -webkit-appearance: none;
+    -ms-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    outline: none;
+    text-overflow: ellipsis;
+    border: none;
+    
+    background: #D9D9D9;
+
+    font-family: Jost;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 1.25rem;
+    line-height: 29px;
+    
+}
+
+.search-field .placeholder{
+   position: absolute;
+   transition: all 1s ease;
+}
+.search-field input:valid + .placeholder{
+    opacity: 0.7;
+    z-index: -100;
+}
+
+.search-products{
+    width: 211.61px;
+    height: 29px;
+    
+}
+
+.search-bar-logo-place{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 95.43px;
+    height: 55px;
+
+    background: #5800FF;
+    border-radius: 0px 30px 30px 0px;
+}
+
+.search-bar-logo{
+    width: 31.12px;
+    height: 30px;
+}
+
+.AFC{
+    
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 1rem;
+    line-height: 22px;
+
+    text-align: center;
+
+    color: #000000;
+
+    
+}
+
+/* .AFC-nav{ 
+    
+} */
+
+.AFC-nav-elements{
+    display: flex;
+    align-items: center;
+    /* justify-content: space-between; */
+
+    list-style: none;
+}
+
+.AFC-nav-elements > *{
+    flex-basis: 100%;
+    flex-direction: column;
+    width: 100px;
+}
+
+.AFC-nav-element{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.menu{
+    height: 40px;
+    width: 100%;
+    background: #E3E3E3;
+    display: flex;
+    align-items: center;
+    
+}
+
+.links{
+    font-family: Jost;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1.25rem;
+    line-height: 29px;
+}
+
+.menu-elements{
+    
+    
+    
+    height: 40px;
+    min-width: 850px;
+    display: flex;
+    list-style: none;
+    align-items: center;
+    text-align: center;
+    
+}
+
+.menu-element + .menu-element{
+    margin-left: 40px;
+}
+
+.menu-element{
+    max-height: fit-content;
+    transition: all 0.3s ease;
+    padding: 0em .5em;
+    
+}
+.menu-links{
+    text-decoration: none;
+    color: var(--clr-black);
+    transition: all 0.3s ease;  
+}
+
+.menu-element:hover{
+    background: var(--clr-black);
+    color: var(--clr-white);
+    opacity: 0.9;
+}
+.menu-links:hover{
+    color: var(--clr-white);
+}
+
+
+a{
+    text-decoration: none;
+    color: black;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}

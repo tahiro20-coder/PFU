@@ -4,7 +4,7 @@ header.innerHTML = `
     <div class="container">
     <div class="nav-bar-sec1">
         <img class="box" href="../images/akar-icons_shipping-box-01.png">
-        <p class="shipping-free">Free Shipping for order over 50$</p>
+        <p class="shipping-free">Free Shipping for order over 500$</p>
     </div>
     <nav class="nav-bar-sec2">
         <ul class="nav-elements">
