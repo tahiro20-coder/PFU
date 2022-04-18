@@ -38,7 +38,6 @@ header.innerHTML = `
             <nav class="AFC-nav">
                 <ul class="AFC-nav-elements">
                     <li class="AFC-nav-element account"><img src="../images/codicon_account.png" alt="account" class="AFC_icone"><a href="profile.html">My Account</a></li>
-                    <li class="AFC-nav-element fav"><img src="../images/ant-design_heart-outlined.png" alt="Favorites" class="AFC_icone"><a href="favorites.html">Favorites</a></li>
                     <li class="AFC-nav-element cart"><img src="../images/bi_cart.png" alt="cart" class="AFC_icone">My Cart</li>
                 </ul>
             </nav>
