@@ -58,6 +58,15 @@ form.addEventListener("submit", (e) => {
     form.classList.add("hide");
     messageOutput.classList.remove("hide");
     btnOutput.classList.remove("hide");
+
+    Email.send({
+      
+      To : 'rezzag2016@gmail.com',
+      From : emailInput.value,
+      Subject : subjectInput.value,
+      Body : messageInput.value
+  });
+  
   }
 });
 

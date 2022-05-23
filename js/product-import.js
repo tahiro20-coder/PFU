@@ -12,17 +12,40 @@ const init = function(e) {
     var details =JSON.parse(localStorage.getItem("details"));
     var img =JSON.parse(localStorage.getItem("img"));
     var price =JSON.parse(localStorage.getItem("price"));
-    const position =JSON.parse(localStorage.getItem("position"));
+    const outofstock = JSON.parse(localStorage.getItem("outofstock"));
 
+    //for buy now button clicked
+    var item_quantity = document.querySelector(".quantity-product");
+    localStorage.setItem("quantity",JSON.stringify(item_quantity.value));
+    item_quantity.addEventListener("change",()=>{
+        localStorage.setItem("quantity",JSON.stringify(item_quantity.value));
+    })
+  
+  
     
-    product_title.innerHTML = "Home / " + details[position];
-    main_title.innerHTML = details[position];
-    prodcut_img.innerHTML = img[position];
-    prodcut_price.innerHTML = price[position];
+    product_title.innerHTML = "Home / " + details;
+    main_title.innerHTML = details;
+    prodcut_img.innerHTML = img;
+    prodcut_price.innerHTML = price;
+
+    if(outofstock==0){
+        var addToCartBtn = document.querySelector(".add-cart");
+        var buyNowBtn = document.querySelector(".buy-now");
+        var commingSoonBtn = document.querySelector(".comming-soon");
+        addToCartBtn.classList.add("hide");
+        buyNowBtn.classList.add("hide");
+        commingSoonBtn.classList.remove("hide");
+        commingSoonBtn.addEventListener("click",()=>{
+            alert("This Product is out of Stock Come Back Later");
+        })
+    }
+
+
     
 
     
 };
+
 
 
 document.addEventListener('DOMContentLoaded' , function(){init();});

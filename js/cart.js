@@ -27,7 +27,7 @@ function ready() {
 
     // document.querySelector("btn-checkout").addEventListener("click" , checkoutClicked);
     
-  
+    
   
 }
 
@@ -115,7 +115,7 @@ function addItemToCart(product_title, product_price, product_quantity, product_i
     var cartRow = document.createElement("div");
     
     cartRow.className = "cart-item";
-    cartRow.innerHTML= `<div class="item">
+    cartRow.innerHTML= `<div class="product-x">
                             <div class="product-img">
                                 ${product_img}
                             </div>
@@ -252,28 +252,26 @@ function checkoutClicked(){
 
 }
 
-
-
 //cart Slide
 function cartSlide(){
-const cart_btn = document.querySelector(".cart");
-const cart_sidebar = document.querySelector(".cart-sidebar");
-const cart_close = document.querySelector(".cart-close");
-
-cart_btn.addEventListener("click" , () => {
-    console.log("slm");
-    cart_sidebar.style.right = "0";
-})
-
-cart_close.addEventListener("click" , () => {
-    cart_sidebar.style.right = "-700px";
-})
-}
-
-
-
-  //cart Slide
-  cartSlide();
-
-  cartImport();
+    const cart_btn = document.querySelector(".cart");
+    const cart_sidebar = document.querySelector(".cart-sidebar");
+    const cart_close = document.querySelector(".cart-close");
+    
+    cart_btn.addEventListener("click" , () => {
+        console.log("slm");
+        cart_sidebar.style.right = "0";
+    })
+    
+    cart_close.addEventListener("click" , () => {
+        cart_sidebar.style.right = "-700px";
+    })
+    }
+    
+    
+    
+      //cart Slide
+      cartSlide();
+    
+      cartImport();
   updateCartTotal();

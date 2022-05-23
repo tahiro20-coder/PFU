@@ -161,7 +161,7 @@ button + button{
 button{
     
     padding: .5em 1em;
-    width: 15%;
+    width: 150px;
     font-family: 'Jost';
     font-style: normal;
     font-weight: 500;
@@ -189,3 +189,58 @@ button{
 }
 
 
+
+@media (max-width:950px) {
+
+    .submit{
+        max-height: 950px;
+    }
+    
+    .submit-area{
+        height: 100%;
+        width: 95%;
+    }
+
+    .buttons{
+        justify-content: center;
+    }
+
+    form{
+        flex-wrap: wrap;
+    }
+
+    .groups{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .form-group{
+        width: 60%;
+    }
+
+    .form-group input{
+        width: 100%;
+    }
+
+    .s-title{
+        width: 300px;
+    }
+    
+    .c-title{
+        width:260px;
+        word-break: none;
+    }
+
+    .profile{
+        min-height: 200px;
+    }
+}
+
+@media (max-width: 500px){
+
+    .profile , .submit{
+        width: 390px;
+    }
+}

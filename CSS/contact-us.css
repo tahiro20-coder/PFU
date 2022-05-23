@@ -173,8 +173,10 @@ textarea::placeholder{
 }
 
 .submit-again{
-    margin-left: 8.5em ;
-    margin-top: 2em;
+   margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .s-title{
@@ -209,3 +211,35 @@ textarea::placeholder{
     color: #000;
 }
 
+.hide{
+    display: none;
+}
+@media (max-width: 950px){
+    .submit{
+        flex-direction: column;
+        min-height: 1200px;
+        justify-content:space-between;
+    }
+
+    .submit-area{
+        width: 80%;
+        margin-top: 1em;
+    }
+
+    .submit-sidebar{
+        margin-top: 5em;
+        width: 80%;
+    }
+
+    textarea{
+        min-width: 400px;
+    }
+
+ 
+}
+
+@media (max-width:650px){
+    textarea{
+        min-width: 300px;
+    }
+}

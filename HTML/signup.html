@@ -25,51 +25,48 @@
                 <div class="ca-content">
                     <h1 class="ca-title">Create Account</h1>
                     <div class="ca-input-area">
-                        <div class="ca-input-fields">
+                        <fomr class="ca-input-fields">
 
                             <label class="name-field">
-                                <input type="email/" required/>
+                                <input type="email" required>
                                 <span class="placeholder">Full Name</span>
-                                <span class="lazm"></span>
-                                <div class="error-msg"></div>
+                                <span class="lazm"></span> 
                             </label>
 
                             <label class="phone-field">
-                                <input type="email/" required/>
+                                <input type="text" maxlength="10" pattern="/^[0-9]+$/" onkeypress="return onlyNumberKey(event)" required>
                                 <span class="placeholder">Phone Number</span>
                                 <span class="lazm"></span>
-                                <div class="error-msg"></div>
                             </label>
 
                             <label class="adr-field">
-                                <input type="email/" required/>
+                                <input type="text" required>
                                 <span class="placeholder">Adress</span>
                                 <span class="lazm"></span>
-                                <div class="error-msg"></div>
                             </label>
 
                             <label class="email-field">
-                                <input type="email/" required/>
+                                <input type="email" required id="email">
                                 <span class="placeholder">Email Address</span>
                                 <span class="lazm"></span>
                                 <div class="error-msg"></div>
                             </label>
 
                             <label class="pwd-field">
-                                <input type="email/" required/>
+                                <input type="text" required id="password">
                                 <span class="placeholder">Password</span>
                                 <span class="lazm"></span>
                                 <div class="error-msg"></div>
                             </label>
 
-
-                        </div>
+                        </form>
                         <div class="terms">
                             <input type="checkbox" class="checkbox" required checked/>
                             <span>I agree to the <a href="#">Terms and Services</a> and <a href="#">Privacy Policy</a></span>
                         </div>
-                        <div class="submit-box">
-                            <a class="signup" href="../html/signup.html">Create Account</a>
+                        <div class="submit-box azerty">
+                            <a class="signup hide" href="../html/signup.html" >Create Account</a>
+                            <a class="azerty" href="#" >Create Account</a>
                         </div>
                         <div class="signin">
                             <span>Already a member? <a class="signin-link"href="../html/login.html">Sign in</a></span>
@@ -90,7 +87,7 @@
                 </nav>
 
                 <div class="logo">
-
+                    <img src="../images/new-logo.jpg" alt="logo">
                 </div>
 
                 <div class="other-logs">
@@ -114,6 +111,6 @@
 
         </section>
     </main>
-    
+    <script src="../js/sign-up.js"></script>
 </body>
 </html>

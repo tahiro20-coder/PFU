@@ -16,7 +16,7 @@ a {
 
 body {
     width: 100%;
-    min-height: 100vh;
+    
     /* background: var(--gray-1); */
 
     overflow: hidden;
@@ -39,16 +39,23 @@ body {
 
 
 .log-in {
-    margin: 5em auto;
-    min-width: 300px;
+    margin: 6em auto;
+    
     max-width: 850px;
-    height: 80vh;
+    height: 80%;
+    width: 80%;
     box-shadow: 0px 1px 5px #000;
     
     background-color: #fff;
+    display: flex;
+    align-items:center;
+    justify-content: center;
 
 }
 
+form{
+    width: 100%;
+}
 .left{
     padding: 0.5em;
     width: 85%;
@@ -95,6 +102,7 @@ body {
     width: 100%;
     display: flex;
     align-items: center;
+    justify-content: center;
     flex-direction: column;
     padding: 1.5em;
     
@@ -155,10 +163,33 @@ body {
     transition: 0.1s;
 }
 
-.error-msg {
+.error-msg{
     width: max-content;
     font-size: var(--text-size-2);
     color: red;
+  
+    position: absolute;
+    right: 20px;
+    top: 90%;
+    animation: error 6s infinite;
+
+    
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 1rem;
+    line-height: 19px;
+    padding: .2em;
+    transition: 
+    top 0.3s ease;
+    
+
+}
+
+.valid-msg {
+    width: max-content;
+    font-size: var(--text-size-2);
+    color: rgb(4, 109, 4);
   
     position: absolute;
     right: 20px;
@@ -210,13 +241,17 @@ body {
 }
 
 .remember{
-    
+    width:165px;
     display: flex;
     align-items: center;
 }
 
+.forget{
+    width:207px;
+}
 .choices .remember span{
     margin-left: 0.5em;
+    width:100%;
 }
 
 .submit-box{
@@ -228,7 +263,7 @@ body {
 
 }
 
-.login , .signup{
+.login , .signup,.azerty{
     padding: 1em;
     font-family: 'Jost';
     font-style: normal;
@@ -238,8 +273,6 @@ body {
     display: flex;
     align-items: center;
     text-align: center;
-    
-   
 }
 
 .login{
@@ -252,6 +285,14 @@ body {
     color: #000;
 }
 
+.azerty{
+    color: var(--clr-white);
+    background-color: rgb(66, 66, 66);
+}
+
+.hide{
+    display: none;
+}
 .other-logs{
    
     display: flex;
@@ -281,340 +322,47 @@ img{
 }
 
 
-/*    background        
-.wrapper{
-    position: relative;
-    width: 100vw;
-    height: 100vh;
+.logo{
+    width: 60%;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;    
 }
 
-@keyframes move {
-    100% {
-        transform: translate3d(0, 0, 1px) rotate(360deg);
+.logo img{
+    width:170px;
+    
+}
+
+
+
+@media (max-width:950px){
+    
+
+    .left{
+        width: 90%;
+    }
+
+    .user-info{
+        padding: 0em;
+    }
+
+    .submit-box{
+        width: 100%;
     }
 }
 
-.background {
-    position: fixed;
-    width: 100vw;
-    height: 100vh;
-    top: 0;
-    left: 0;
-    background: #5b348d;
-    overflow: hidden;
-    z-index: -100;
-}
+@media (max-width:550px){
+    .pwd-field,.email-field{
+        width: 300px;
+    }
 
-.background span {
-    width: 20vmin;
-    height: 20vmin;
-    border-radius: 20vmin;
-    backface-visibility: hidden;
-    position: absolute;
-    animation: move;
-    animation-duration: 45;
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;
-}
+    .pwd-field input,.email-field input{
+        width: 250px;
+    }
 
-
-.background span:nth-child(0) {
-    color: #bd4242;
-    top: 89%;
-    left: 16%;
-    animation-duration: 25s;
-    animation-delay: -49s;
-    transform-origin: -9vw 22vh;
-    box-shadow: 40vmin 0 5.748920455130127vmin currentColor;
+    .log-in{
+        height:100%;
+    }
 }
-.background span:nth-child(1) {
-    color: #fcfcfc;
-    top: 16%;
-    left: 6%;
-    animation-duration: 42s;
-    animation-delay: -18s;
-    transform-origin: 5vw -14vh;
-    box-shadow: 40vmin 0 5.660959841179682vmin currentColor;
-}
-.background span:nth-child(2) {
-    color: #bd4242;
-    top: 14%;
-    left: 21%;
-    animation-duration: 39s;
-    animation-delay: -1s;
-    transform-origin: 9vw 2vh;
-    box-shadow: 40vmin 0 5.594674551973846vmin currentColor;
-}
-.background span:nth-child(3) {
-    color: #bd4242;
-    top: 10%;
-    left: 75%;
-    animation-duration: 16s;
-    animation-delay: -44s;
-    transform-origin: 4vw -20vh;
-    box-shadow: 40vmin 0 5.28648767774704vmin currentColor;
-}
-.background span:nth-child(4) {
-    color: #000000;
-    top: 59%;
-    left: 33%;
-    animation-duration: 49s;
-    animation-delay: -21s;
-    transform-origin: 11vw 11vh;
-    box-shadow: -40vmin 0 5.248327523423191vmin currentColor;
-}
-.background span:nth-child(5) {
-    color: #fcfcfc;
-    top: 37%;
-    left: 16%;
-    animation-duration: 18s;
-    animation-delay: -11s;
-    transform-origin: -4vw 0vh;
-    box-shadow: -40vmin 0 5.223045132174514vmin currentColor;
-}
-.background span:nth-child(6) {
-    color: #fcfcfc;
-    top: 86%;
-    left: 10%;
-    animation-duration: 33s;
-    animation-delay: -33s;
-    transform-origin: -9vw 19vh;
-    box-shadow: 40vmin 0 5.098942820876984vmin currentColor;
-}
-.background span:nth-child(7) {
-    color: #000000;
-    top: 90%;
-    left: 49%;
-    animation-duration: 14s;
-    animation-delay: -45s;
-    transform-origin: -4vw 12vh;
-    box-shadow: 40vmin 0 5.4088344254959075vmin currentColor;
-}
-.background span:nth-child(8) {
-    color: #bd4242;
-    top: 90%;
-    left: 100%;
-    animation-duration: 16s;
-    animation-delay: -32s;
-    transform-origin: 11vw 18vh;
-    box-shadow: -40vmin 0 5.274979613258516vmin currentColor;
-}
-.background span:nth-child(9) {
-    color: #bd4242;
-    top: 89%;
-    left: 86%;
-    animation-duration: 26s;
-    animation-delay: -21s;
-    transform-origin: 14vw -10vh;
-    box-shadow: 40vmin 0 5.497221823108755vmin currentColor;
-}
-.background span:nth-child(10) {
-    color: #d82c90;
-    top: 57%;
-    left: 28%;
-    animation-duration: 30s;
-    animation-delay: -6s;
-    transform-origin: -11vw -24vh;
-    box-shadow: -40vmin 0 5.164825132770215vmin currentColor;
-}
-.background span:nth-child(11) {
-    color: #000000;
-    top: 87%;
-    left: 91%;
-    animation-duration: 41s;
-    animation-delay: -28s;
-    transform-origin: 1vw -9vh;
-    box-shadow: 40vmin 0 5.20858597391406vmin currentColor;
-}
-.background span:nth-child(12) {
-    color: #d82c90;
-    top: 48%;
-    left: 54%;
-    animation-duration: 36s;
-    animation-delay: -6s;
-    transform-origin: -4vw 24vh;
-    box-shadow: -40vmin 0 5.442160829906269vmin currentColor;
-}
-.background span:nth-child(13) {
-    color: #d82c90;
-    top: 88%;
-    left: 59%;
-    animation-duration: 30s;
-    animation-delay: -41s;
-    transform-origin: -9vw -12vh;
-    box-shadow: 40vmin 0 5.263881110243911vmin currentColor;
-}
-.background span:nth-child(14) {
-    color: #000000;
-    top: 56%;
-    left: 94%;
-    animation-duration: 22s;
-    animation-delay: -19s;
-    transform-origin: 22vw 14vh;
-    box-shadow: 40vmin 0 5.250680615140134vmin currentColor;
-}
-.background span:nth-child(15) {
-    color: #bd4242;
-    top: 7%;
-    left: 15%;
-    animation-duration: 37s;
-    animation-delay: -20s;
-    transform-origin: -12vw 17vh;
-    box-shadow: 40vmin 0 5.179657667910829vmin currentColor;
-}
-.background span:nth-child(16) {
-    color: #000000;
-    top: 29%;
-    left: 100%;
-    animation-duration: 40s;
-    animation-delay: -5s;
-    transform-origin: 17vw -1vh;
-    box-shadow: 40vmin 0 5.9996967703369055vmin currentColor;
-}
-.background span:nth-child(17) {
-    color: #d82c90;
-    top: 47%;
-    left: 15%;
-    animation-duration: 48s;
-    animation-delay: -32s;
-    transform-origin: 25vw 8vh;
-    box-shadow: 40vmin 0 5.406299376623714vmin currentColor;
-}
-.background span:nth-child(18) {
-    color: #bd4242;
-    top: 21%;
-    left: 15%;
-    animation-duration: 27s;
-    animation-delay: -42s;
-    transform-origin: 11vw 24vh;
-    box-shadow: -40vmin 0 5.437987351979298vmin currentColor;
-}
-.background span:nth-child(19) {
-    color: #bd4242;
-    top: 68%;
-    left: 27%;
-    animation-duration: 20s;
-    animation-delay: -40s;
-    transform-origin: 2vw 3vh;
-    box-shadow: 40vmin 0 5.1340904430972225vmin currentColor;
-}
-.background span:nth-child(20) {
-    color: #000000;
-    top: 55%;
-    left: 31%;
-    animation-duration: 15s;
-    animation-delay: -46s;
-    transform-origin: 5vw 24vh;
-    box-shadow: 40vmin 0 5.492295994959854vmin currentColor;
-}
-.background span:nth-child(21) {
-    color: #fcfcfc;
-    top: 42%;
-    left: 99%;
-    animation-duration: 30s;
-    animation-delay: -16s;
-    transform-origin: -4vw -15vh;
-    box-shadow: -40vmin 0 5.95247181747286vmin currentColor;
-}
-.background span:nth-child(22) {
-    color: #fcfcfc;
-    top: 60%;
-    left: 24%;
-    animation-duration: 38s;
-    animation-delay: -49s;
-    transform-origin: -12vw 6vh;
-    box-shadow: -40vmin 0 5.966467521754481vmin currentColor;
-}
-.background span:nth-child(23) {
-    color: #bd4242;
-    top: 51%;
-    left: 49%;
-    animation-duration: 50s;
-    animation-delay: -21s;
-    transform-origin: -5vw 15vh;
-    box-shadow: -40vmin 0 5.249982543740606vmin currentColor;
-}
-.background span:nth-child(24) {
-    color: #000000;
-    top: 37%;
-    left: 31%;
-    animation-duration: 30s;
-    animation-delay: -24s;
-    transform-origin: -13vw -15vh;
-    box-shadow: 40vmin 0 5.148000861963036vmin currentColor;
-}
-.background span:nth-child(25) {
-    color: #000000;
-    top: 70%;
-    left: 73%;
-    animation-duration: 16s;
-    animation-delay: -8s;
-    transform-origin: -20vw -2vh;
-    box-shadow: 40vmin 0 5.888674323969367vmin currentColor;
-}
-.background span:nth-child(26) {
-    color: #d82c90;
-    top: 28%;
-    left: 74%;
-    animation-duration: 30s;
-    animation-delay: -40s;
-    transform-origin: -15vw 11vh;
-    box-shadow: -40vmin 0 5.947008783534223vmin currentColor;
-}
-.background span:nth-child(27) {
-    color: #bd4242;
-    top: 56%;
-    left: 66%;
-    animation-duration: 34s;
-    animation-delay: -31s;
-    transform-origin: -19vw 16vh;
-    box-shadow: -40vmin 0 5.607945719343009vmin currentColor;
-}
-.background span:nth-child(28) {
-    color: #bd4242;
-    top: 70%;
-    left: 37%;
-    animation-duration: 53s;
-    animation-delay: -18s;
-    transform-origin: 14vw -22vh;
-    box-shadow: -40vmin 0 5.9516135746509145vmin currentColor;
-}
-.background span:nth-child(29) {
-    color: #bd4242;
-    top: 58%;
-    left: 42%;
-    animation-duration: 41s;
-    animation-delay: -38s;
-    transform-origin: -1vw 9vh;
-    box-shadow: -40vmin 0 5.499364932796818vmin currentColor;
-}
-.background span:nth-child(30) {
-    color: #d82c90;
-    top: 79%;
-    left: 19%;
-    animation-duration: 6s;
-    animation-delay: -40s;
-    transform-origin: 25vw 19vh;
-    box-shadow: -40vmin 0 5.563681788053497vmin currentColor;
-}
-.background span:nth-child(31) {
-    color: #000000;
-    top: 99%;
-    left: 85%;
-    animation-duration: 52s;
-    animation-delay: -33s;
-    transform-origin: -11vw -14vh;
-    box-shadow: 40vmin 0 5.639826398255026vmin currentColor;
-}
-.background span:nth-child(32) {
-    color: #fcfcfc;
-    top: 41%;
-    left: 88%;
-    animation-duration: 6s;
-    animation-delay: -47s;
-    transform-origin: 23vw 8vh;
-    box-shadow: -40vmin 0 5.3705263209330365vmin currentColor;
-}
-
-
-       */

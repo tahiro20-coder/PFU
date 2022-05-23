@@ -141,7 +141,7 @@ body {
     
 }
 
-.signup{
+.signup,.azerty{
     color: var(--clr-white);
     font-family: 'Jost';
     font-style: normal;
@@ -246,6 +246,13 @@ label+label{
     top: 7px;
     background: var(--clr-white);
 }
+
+.name-field input:focus,
+.name-field input:valid,
+.phone-field input:valid, 
+.phone-field input:focus,
+.adr-field input:valid,
+.adr-field input:focus,
 .pwd-field input:valid,
 .pwd-field input:focus,
 .email-field input:valid,
@@ -266,29 +273,7 @@ label+label{
     left: 5px;
     
 }
-/*
-.error-msg {
-    width: max-content;
-    font-size: var(--text-size-2);
-    color: red;
-  
-    position: absolute;
-    right: 20px;
-    top: 90%;
-    animation: error 6s infinite;
 
-    
-    font-family: 'Open Sans';
-    font-style: normal;
-    font-weight: 600;
-    font-size: 1rem;
-    line-height: 19px;
-    padding: .2em;
-    transition: 
-    top 0.3s ease;
-    
-
-} */
 
 .right-content{
     width: 90%;
@@ -427,4 +412,71 @@ img{
     color: #374151;
     text-align: center;
     width: 70%;
+}
+
+.error-msg{
+    width: max-content;
+    font-size: var(--text-size-2);
+    color: red;
+  
+    position: absolute;
+    right: 125px;
+    top: 90%;
+    animation: error 6s infinite;
+
+    
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 1rem;
+    line-height: 19px;
+    padding: .2em;
+    transition: 
+    top 0.3s ease;
+    
+
+}
+
+.valid-msg {
+    width: max-content;
+    font-size: var(--text-size-2);
+    color: rgb(4, 109, 4);
+  
+    position: absolute;
+    right: 125px;
+    top: 90%;
+    animation: error 6s infinite;
+
+    
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 1rem;
+    line-height: 19px;
+    padding: .2em;
+    transition: 
+    top 0.3s ease;
+    
+
+}
+
+.logo{
+    width: 100%;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+}
+
+.logo img{
+    width:200px;
+}
+
+.hide{
+    display: none;
+}
+
+.azerty{
+    background-color: grey;
+    
 }

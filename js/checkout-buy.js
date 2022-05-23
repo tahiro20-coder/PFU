@@ -1,3 +1,6 @@
+
+
+
 if(document.readyState == "laoding"){
     document.addEventListener("DOMContentLoaded", ready)
 } else{
@@ -7,80 +10,33 @@ if(document.readyState == "laoding"){
 function ready() {
 
 
-    cartImport();
-    // //cart change item quantity
-    // var quantityInputs = document.getElementsByClassName("quantity");
-    // for (var i = 0 ; i < quantityInputs.length ; i++){
-    //     var input = quantityInputs[i];
-    //     input.addEventListener("change", quantityChanged)
-    // }
-
-    // //cart add item
-    // var addToCartButton = document.querySelector(".add-cart");
-    // addToCartButton.addEventListener("click" , addToCartClicked)
-
-    // document.querySelector("btn-checkout").addEventListener("click" , checkoutClicked);
-
-    //addValue();
-
-    
-    
-    
-    localStorage.removeItem("details");
-    localStorage.removeItem("img");
-    localStorage.removeItem("price");
-    localStorage.removeItem("position");
-    localStorage.removeItem("outofstock");
-    localStorage.removeItem("quantity");
-    
-        
+    itemImport();
+   
     
 
 }
 
-//functions
-function addValue(){
 
+function itemImport(){
+    
+ 
 
+    var details =JSON.parse(localStorage.getItem("details"));
+    var img =JSON.parse(localStorage.getItem("img"));
+    var price =JSON.parse(localStorage.getItem("price"));
+    var quantity = JSON.parse(localStorage.getItem("quantity"));
 
-
-    var productNames = document.querySelectorAll(".product-name");//attribute name is value
-    productNames.forEach(productNames => {
-        
-        productNames.setAttribute("value",productNames.innerHTML);
-    });
-
-
-
-
-
-}
-
-
-function cartImport(){
-    //cart show 
-    var cartTitles = [];
-    var cartPrices = [];
-    var cartQuantity = [];
-    var cartImages = [];
-
-    cartTitles = JSON.parse(localStorage.getItem("cartTitles"));
-    cartPrices = JSON.parse(localStorage.getItem("cartPrices"));
-    cartQuantity = JSON.parse(localStorage.getItem("cartQuantity"));
-    cartImages = JSON.parse(localStorage.getItem("cartImages"));
-
-    if(cartTitles.length == 0){
-        empty(cartTitles);
+    if(details.length == 0){
+        empty(details);
     }
 
 
-    for ( var i = 0 ; i <cartPrices.length ; i++){
-        addItemToCart(cartTitles[i], cartPrices[i], cartQuantity[i], cartImages[i]);
-    };
+    
+        addItemToCart(details, price, quantity , img);
+    
 
     
 }
-
 
 function addItemToCart(product_title, product_price, product_quantity, product_img){
     
@@ -103,7 +59,7 @@ function addItemToCart(product_title, product_price, product_quantity, product_i
 
     var imgElement = document.querySelector(".item-img");
     imgElement.classList.remove("item-img");
-    imgElement.classList.add("product-y")
+    imgElement.classList.add("product-img")
     
     
     var quantityElement = document.querySelector(".product-quantity");
@@ -119,40 +75,35 @@ function addItemToCart(product_title, product_price, product_quantity, product_i
     
 }
 
-
 function removeCartItem(event){
     var buttonClicked = event.target;
     buttonClicked.parentElement.parentElement.remove();
     var titleToRemove = buttonClicked.parentElement.parentElement.querySelector(".product-name").innerHTML;
     console.log(titleToRemove);
 
-    var cartTitles = JSON.parse(localStorage.getItem("cartTitles"));
-    var cartPrices = JSON.parse(localStorage.getItem("cartPrices"));
-    var cartQuantity = JSON.parse(localStorage.getItem("cartQuantity"));
-    var cartImages = JSON.parse(localStorage.getItem("cartImages"));
+    var details =JSON.parse(localStorage.getItem("details"));
+    var img =JSON.parse(localStorage.getItem("img"));
+    var price =JSON.parse(localStorage.getItem("price"));
+    var quantity = JSON.parse(localStorage.getItem("quantity"));
                      
                      
                      
-    for ( var i = 0 ; i < cartTitles.length ; i++ ){
-        if(cartTitles[i] === titleToRemove)
+    for ( var i = 0 ; i < details.length ; i++ ){
+        if(details === titleToRemove)
             {
-                cartTitles.splice(i,1);
-                cartPrices.splice(i,1);
-                cartQuantity.splice(i,1);
-                cartImages.splice(i,1);
+                localStorage.removeItem("details");
+                localStorage.removeItem("img");
+                localStorage.removeItem("price");
+                localStorage.removeItem("quantity");
             }
     };
 
-    localStorage.setItem("cartTitles",JSON.stringify(cartTitles));
-    localStorage.setItem("cartPrices",JSON.stringify(cartPrices));
-    localStorage.setItem("cartQuantity",JSON.stringify(cartQuantity));
-    localStorage.setItem("cartImages",JSON.stringify(cartImages));
-    empty(cartTitles);
+  
+    empty(details);
     updateCartTotal();
     calculateShipping();
     
 }
-
 
 function quantityChanged(event){
     var input = event.target;
@@ -208,13 +159,12 @@ function updateRowTotal() {
     
 }
 
-
 function calculateShipping(){
     var shippingElement = document.querySelector(".sub-shipping");
     var subTotalElement = document.querySelector(".sub-total");
     
     var shippingprice = parseFloat(subTotalElement.innerHTML);
-    shippingprice = Math.round(shippingprice * 5) / 100;
+    shippingprice = Math.round(shippingprice * 11.5) / 100;
     shippingElement.innerHTML = shippingprice+"$";
     calculateFullTotal()
 }
@@ -224,7 +174,7 @@ function calculateFullTotal(){
     var shippingElement = document.querySelector(".sub-shipping");
     var subTotalElement = document.querySelector(".sub-total");
     var total = parseFloat(subTotalElement.innerHTML.replace("$","")) + parseFloat(shippingElement.innerHTML.replace("$",""))
-    fullTotal.innerHTML = total +"$";
+    fullTotal.innerHTML = total + "$";
     
 }
 
@@ -245,12 +195,12 @@ function empty(cartTitles){
 function savePrice(value){
     
     var quantityElemnts = document.getElementsByClassName("product-quantity");
-    var cartQuantity = JSON.parse(localStorage.getItem("cartQuantity"));
-    for(var i = 0; i < quantityElemnts.length; i++){
-        cartQuantity[i] = quantityElemnts[i].value;
-    }
+    var item_quantity = JSON.parse(localStorage.getItem("quantity"));
+    
+    item_quantity = quantityElemnts.value;
+    
 
-    localStorage.setItem("cartQuantity",JSON.stringify(cartQuantity));
+    localStorage.setItem("cartQuantity",JSON.stringify(item_quantity));
 
 }
 //cart remove item
@@ -260,7 +210,3 @@ for (var i = 0 ; i < removeCartItemButtons.length ; i++){
     var removeButton = removeCartItemButtons[i];
     removeButton.addEventListener("click" , removeCartItem)
 }
-    
-
-var orderImages = document.getElementsByClassName("product-img");
-
